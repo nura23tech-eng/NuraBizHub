@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, sans-serif;
+  min-height: 100vh;
   background: #f8fafc;
 }
 
 button {
   cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-button:hover {
-  transform: scale(1.02);
 }
