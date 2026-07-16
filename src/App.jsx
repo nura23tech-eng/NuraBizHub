@@ -1,70 +1,53 @@
-import React from "react";
+import Header from "./components/Header";
+import FeatureCard from "./components/FeatureCard";
 
 function App() {
+  const features = [
+    {
+      title: "Record Sale",
+      description: "Quickly record every sale your business makes."
+    },
+    {
+      title: "Record Expense",
+      description: "Track daily business expenses with ease."
+    },
+    {
+      title: "Inventory",
+      description: "Monitor products and stock levels."
+    },
+    {
+      title: "Customers",
+      description: "Manage customer records and relationships."
+    },
+    {
+      title: "Ask AI",
+      description: "Get instant AI-powered business advice."
+    },
+    {
+      title: "Business Report",
+      description: "View simple reports about your business."
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-slate-100">
+      <Header />
 
-      {/* Header */}
-      <header className="bg-blue-900 text-white p-5">
-        <h1 className="text-2xl font-bold">
-          NuraBizHub AI
-        </h1>
-
-        <p className="text-sm mt-1">
-          Your Intelligent Business Companion
-        </p>
-      </header>
-
-
-      {/* Welcome Section */}
-      <main className="p-5">
-
-        <h2 className="text-xl font-semibold mb-4">
-          Welcome 👋
+      <main className="max-w-6xl mx-auto p-6">
+        <h2 className="text-2xl font-bold text-slate-800 mb-6">
+          Welcome to NuraBizHub
         </h2>
 
-        <p className="mb-6 text-gray-600">
-          Manage your business, track sales, expenses and get AI-powered advice.
-        </p>
-
-
-        {/* Main Features */}
-        <div className="grid gap-4">
-
-          <button className="bg-blue-700 text-white rounded-xl p-5 text-left">
-            📌 Record Sale
-          </button>
-
-
-          <button className="bg-sky-500 text-white rounded-xl p-5 text-left">
-            💰 Record Expense
-          </button>
-
-
-          <button className="bg-green-600 text-white rounded-xl p-5 text-left">
-            📦 Goods & Inventory
-          </button>
-
-
-          <button className="bg-purple-600 text-white rounded-xl p-5 text-left">
-            👥 Customers
-          </button>
-
-
-          <button className="bg-yellow-500 text-black rounded-xl p-5 text-left">
-            🤖 Ask AI
-          </button>
-
-
-          <button className="bg-red-500 text-white rounded-xl p-5 text-left">
-            📊 Business Report
-          </button>
-
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <FeatureCard
+              key={feature.title}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
         </div>
-
       </main>
-
     </div>
   );
 }
