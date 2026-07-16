@@ -1,16 +1,17 @@
-export default function Header() {
-
+function Header() {
   return (
-    <header className="bg-primary text-white p-5">
+    <header className="bg-blue-900 text-white shadow-md">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <h1 className="text-2xl font-bold">
+          NuraBizHub
+        </h1>
 
-      <h1 className="text-2xl font-bold">
-        NuraBizHub AI
-      </h1>
-
-      <p className="mt-1">
-        Smart business companion for African SMEs
-      </p>
-
+        <span className="text-sm bg-sky-500 px-3 py-1 rounded-full">
+          AI Business Operating System
+        </span>
+      </div>
     </header>
   );
 }
+
+export default Header;
