@@ -1,25 +1,27 @@
-function Header() {
+import React from "react";
+
+function Header({ businessName, healthScore }) {
   return (
-    <header className="bg-gradient-to-r from-blue-900 to-sky-500 text-white rounded-b-3xl shadow-lg">
-      <div className="max-w-6xl mx-auto px-6 py-6">
+    <header className="px-5 pt-6 pb-2 max-w-md mx-auto flex items-start justify-between">
 
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">
-              NuraBizHub
-            </h1>
+      <div>
+        <p className="text-xs uppercase tracking-widest text-nura-gray font-bold">
+          Mission Control
+        </p>
 
-            <p className="text-sm text-blue-100 mt-1">
-              Your AI Business Companion
-            </p>
-          </div>
+        <h1 className="text-2xl font-bold text-nura-white mt-1">
+          {businessName}
+        </h1>
+      </div>
 
-          <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full">
-            🤖 Nura AI
-          </div>
-        </div>
+      <div className="bg-nura-green/20 border border-nura-green/30 rounded-full px-3 py-1">
+
+        <span className="text-xs font-bold text-nura-green">
+          {healthScore}% Healthy
+        </span>
 
       </div>
+
     </header>
   );
 }
