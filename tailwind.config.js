@@ -3,18 +3,28 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
 
   theme: {
     extend: {
       colors: {
-        primary: "#0B2D5C",
-        sky: "#38BDF8",
-        success: "#16A34A"
-      }
-    }
+        nura: {
+          navy: "#0A192F",
+          card: "#112240",
+          sky: "#00B4D8",
+          green: "#2D6A4F",
+          softGreen: "#D1FAE5",
+          white: "#F8FAFC",
+          gray: "#94A3B8",
+        },
+      },
+
+      borderRadius: {
+        nura: "24px",
+      },
+    },
   },
 
-  plugins: []
+  plugins: [],
 };
