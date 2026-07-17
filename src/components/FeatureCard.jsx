@@ -1,33 +1,33 @@
-function FeatureCard({ title, description, icon, color }) {
+import React from "react";
+
+function FeatureCard({
+  title,
+  description,
+  icon: Icon,
+  color,
+  onClick,
+}) {
   return (
-    <div
-      className={`bg-white rounded-3xl p-6 shadow-sm border border-slate-100 
-      hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+    <button
+      onClick={onClick}
+      className="bg-nura-card border border-white/5 rounded-nura p-5 shadow-lg text-left transition active:scale-95"
     >
 
       <div
-        className={`w-14 h-14 rounded-2xl flex items-center justify-center 
-        text-3xl mb-5 ${color}`}
+        className={`w-12 h-12 rounded-2xl ${color} flex items-center justify-center mb-4`}
       >
-        {icon}
+        <Icon className="w-6 h-6 text-white" />
       </div>
 
-      <h3 className="text-xl font-bold text-slate-800 mb-2">
+      <h3 className="text-nura-white font-bold text-base">
         {title}
       </h3>
 
-      <p className="text-slate-500 leading-relaxed min-h-[50px]">
+      <p className="text-nura-gray text-sm mt-1">
         {description}
       </p>
 
-      <button
-        className="mt-6 w-full bg-blue-900 text-white py-3 rounded-xl 
-        font-semibold hover:bg-blue-800 transition"
-      >
-        Open
-      </button>
-
-    </div>
+    </button>
   );
 }
 
